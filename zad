@@ -33,7 +33,7 @@ print("градус цельсия", tc)
 print("9 задание") 
 ves = int(input())
 rost = int(input())
-imt = ves / rost**2 
+imt = ves / (rost/100)**2 
 print("ИМТ:",imt)
 
 print("10 задание") 
