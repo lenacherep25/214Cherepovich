@@ -1,0 +1,50 @@
+print("Задание 1")
+spisok1 = [12, 67, 77, 56, 23, 34]
+spisok2 = [43, 88, 90, 55, 71, 46]
+spisok3 = []
+razm1 = len(spisok1)
+razm2 = len(spisok2)
+
+for i in range(razm1):
+    chet = spisok1[i]
+    if chet % 2 == 0:
+        spisok3.append(chet)
+for i in range(razm2):
+    chet = spisok2[i]
+    if chet % 2 == 0:
+        spisok3.append(chet)
+print(spisok3)
+
+print("Задание 2")
+tabl = open('E:\/tabl.txt', 'r')
+print(*tabl)
+tabl.close()
+
+print("Задание 4")
+with open('E:\/stroki.txt') as stroki:
+    lines = stroki.readlines()
+    print(lines[3])
+stroki.close()
+
+print("Задание 5")
+w = int(input())
+res = 0
+for i in range(1, w + 1):
+    res += i
+    print(res)
+
+print("Задание 6")
+f = ["pika", "214", "home", "cool", "25"]
+for i in reversed(f):
+    print(i)
+
+print("Задание 7")
+a = int(input("a="))
+spisok = []
+for i in range(2, a):
+    for j in range(2, i):
+        if i % j == 0:
+            break
+    else:
+        spisok.append(i)
+        print(spisok)
