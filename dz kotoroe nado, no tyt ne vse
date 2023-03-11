@@ -1,0 +1,17 @@
+n = int(input("Введите число: "))
+ktoto = []
+for i in range (n): 
+    str = []
+    for j in range(n): 
+        if j == n - i - 1: 
+            str.append(1)
+        elif j < n - i - 1: 
+            str.append(0)
+        elif j > n - i - 1:
+            str.append(2)
+    ktoto.append(str)
+
+for str in ktoto:
+    for element in str:
+        print(element, end=' ')
+    print()
