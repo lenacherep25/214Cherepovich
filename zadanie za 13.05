@@ -1,0 +1,28 @@
+import glob
+import os
+import csv
+import time
+
+
+#1
+def print_docs(directory):
+    files = glob.glob(directory + '/**', recursive=True)
+    for file in files:
+        if not os.path.isdir(file):
+            print(file)
+
+directory_path = "C:\\Program Files"
+print_docs(directory_path)
+input('Нажмити клавишу ')
+
+#3
+
+with open('rows_300.csv', 'w', newline='') as file:
+    zapis = csv.writer(file)
+    zapis.writerow(['№', 'Секунда', 'Микросекунда'])
+    for i in range(1, 301):
+        vr = time.time()
+        sec = int(vr)
+        microsec = int((vr - sec) * 1000000)
+        zapis.writerow([i, sec, microsec])
+        time.sleep(0.01) 
